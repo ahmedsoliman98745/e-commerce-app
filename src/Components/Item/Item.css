@@ -1,0 +1,38 @@
+.item {
+  width: 90%; /* اختياري لو مش عايز الكارت يكبر أكتر من كده */
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.item p {
+  margin: 6px 0px;
+}
+.item-prices {
+  display: flex;
+  gap: 20px;
+}
+.item-new-price {
+  font-size: 18px;
+  color: #374151;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+}
+.item-old-price {
+  font-size: 18px;
+  color: #8c8c8c;
+  font-weight: 500;
+  text-decoration: line-through;
+  padding: 10px;
+  text-align: center;
+}
+.item:hover {
+  transform: scale(1.05);
+  transition: 0.6s;
+}
+
+.item img {
+  width: 100%; /* ✅ الصورة تاخد عرض العمود */
+  height: auto;
+  display: block;
+}
