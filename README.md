@@ -4,13 +4,13 @@ A modern **React-based E-Commerce web application** with authentication, cart ma
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 [https://e-commerce-app-wheat-one.vercel.app](https://e-commerce-app-wheat-one.vercel.app)
+ [https://e-commerce-app-wheat-one.vercel.app](https://e-commerce-app-wheat-one.vercel.app)
 
 ---
 
-## 🚀 Features
+##  Features
 -  Display products
 -  Add/Remove items from cart
 -  Calculate total cart amount
@@ -22,7 +22,7 @@ A modern **React-based E-Commerce web application** with authentication, cart ma
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 - **Frontend:** React.js, JavaScript, CSS  
 - **Routing:** React Router v6  
