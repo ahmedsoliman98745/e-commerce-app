@@ -3,12 +3,12 @@ import Navbar from "../Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
-const Layout = () => {
+const Layout = ({ userData, setuserData }) => {
   return (
     <>
-      <Navbar />
+      <Navbar userData={userData} setuserData={setuserData} />
       <Outlet />
-      <Footer />
+      <Footer userData={userData} />
     </>
   );
 };

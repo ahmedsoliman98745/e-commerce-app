@@ -1,11 +1,19 @@
 .cartitems {
   margin: 100px 170px;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 
 .cartitems hr {
   height: 3px;
   background: #e2e2e2;
   border: 0;
+  border-radius: 10px;
+  margin: 20px 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 
 .cartitems-format-main {
@@ -17,11 +25,21 @@
   color: #454545;
   font-size: 18px;
   font-weight: 600;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 2px solid #e2e2e2;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+
 }
 
 .cartitems-format {
   font-size: 17px;
   font-weight: 500;
+  color: #5c5c5c;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .carticon-product-icon {
@@ -32,10 +50,17 @@
   width: 15px;
   margin: 0px 40px;
   cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 .cartitems-down {
   display: flex;
   margin: 100px 0px;
+  gap: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 
 .cartitems-total {
@@ -44,11 +69,22 @@
   flex-direction: column;
   margin-right: 200px;
   gap: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+
 }
 .cartitems-total-item {
   display: flex;
   justify-content: space-between;
   padding: 15px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5c5c5c;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e2e2;
+
+
 }
 
 .cartitems-total button {
@@ -61,6 +97,10 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  letter-spacing: 1px;
+  
 }
 .cartitems-promocode {
   flex: 1;

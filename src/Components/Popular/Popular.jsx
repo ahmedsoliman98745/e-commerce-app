@@ -2,10 +2,7 @@ import React, { useContext } from "react";
 import Item from "../Item/Item";
 import data_product from "../Assets/data";
 import "./Popular.css";
-import { ApiContext } from "../../Context/APIContext";
 const Popular = () => {
-  const { data } = useContext(ApiContext);
-
   return (
     <div className="popular">
       <h1>Popular In Women</h1>

@@ -4,7 +4,7 @@ import logo from "../Assets/logo.png";
 import cart from "../Assets/cart_icon.png";
 import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
-const Navbar = () => {
+const Navbar = ({ userData, setuserData }) => {
   const location = useLocation();
   const [menu, setMenu] = useState(location.pathname);
   const { getTotalCartItems } = useContext(ShopContext);
@@ -13,20 +13,21 @@ const Navbar = () => {
       <div className="navbar">
         <div className="nav-logo">
           <img src={logo} alt="" />
-          <p>ShopNow</p>
-        </div>
-
-        <ul className="nav-menu">
-          <li
+          <p
             onClick={() => {
               setMenu("shop");
             }}
           >
-            <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
-              Shop
+            <Link
+              to={"/shop"}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              ShopNow
             </Link>
-            {menu === "shop" ? <hr /> : ""}
-          </li>
+          </p>
+        </div>
+
+        <ul className="nav-menu">
           <li
             onClick={() => {
               setMenu("Men");
@@ -66,16 +67,21 @@ const Navbar = () => {
         </ul>
 
         <div className="nav-login-cart">
-          <Link to={"login"} style={{ textDecoration: "none", color: "black" }}>
+          <Link
+            to={"/login"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <button
               onClick={() => {
                 setMenu("");
+                setuserData(null);
               }}
             >
-              Login
+              {localStorage.removeItem("userToken")}
+              Logout
             </button>
           </Link>
-          <Link to={"/cart"}>
+          <Link to={"cart"}>
             <img src={cart} alt="" />
           </Link>
 

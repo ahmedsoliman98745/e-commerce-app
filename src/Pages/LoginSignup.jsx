@@ -1,23 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
-const LoginSignup = () => {
+import axios from "axios";
+import { data, Link, Navigate, useNavigate } from "react-router-dom";
+const LoginSignup = ({ saveUserToken }) => {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+  const getUserData = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+  const sentDataToAPI = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      let { data } = await axios.post(
+        `https://fakestoreapi.com/auth/login`,
+        user
+      );
+      if (data.token) {
+        setIsLoading(false);
+        localStorage.setItem("userToken", data.token);
+        saveUserToken();
+        navigate("/shop"); // بدل navigate("/")
+
+        console.log("Token:", localStorage.getItem("userToken"));
+      }
+    } catch (error) {
+      setIsLoading(false);
+      setError("Invalid username or password");
+    }
+  };
+
   return (
     <div className="loginSignup">
+      {error.length > 0 ? <div className="error">{error}</div> : ""}
       <div className="loginSignup-container">
-        <h1>Sign Up</h1>
+        <h1>Login</h1>
         <div className="loginSignup-fields">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="paasword" placeholder="Password" />
+          <input
+            onChange={getUserData}
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            onChange={getUserData}
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
         </div>
-        <button>Continue</button>
-        <p className="loginSignup-login">
-          Already have an account? <span>Login here</span>
-        </p>
-        <div className="loginSignup-agree">
-          <input type="checkbox" />
-          <p>By continuing, I agree to the terms of use & privacy policy.</p>
-        </div>
+
+        <button onClick={sentDataToAPI}>
+          {isLoading === true ? (
+            <i className="fa-solid fa-circle-notch fa-spin"></i>
+          ) : (
+            "Continue"
+          )}
+        </button>
       </div>
     </div>
   );
