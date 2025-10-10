@@ -1,6 +1,7 @@
  # E-Commerce App
 
 A modern **React-based E-Commerce web application** with authentication, cart management, and protected routes for authorized users only.
+
 ---
 
 ## 🚀 Live Demo
@@ -17,7 +18,8 @@ A modern **React-based E-Commerce web application** with authentication, cart ma
 -  **Modern UI** – Built with React components and responsive layout.  
 -  **Fast Performance** – Optimized React rendering and smooth navigation.
 -  **Authentication System** – Login and Logout functionality using local storage tokens.  
--  **Protected Routes** – Only logged-in users can access certain pages.  
+-  **Protected Routes** – Only logged-in users can access certain pages.
+
 ---
 
 ## 🧱 Tech Stack
