@@ -1,0 +1,99 @@
+.loginSignup {
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+  background: #fce3fe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.loginSignup-container {
+  margin: 30px auto;
+  width: 55vw;
+  height: 50vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  padding: 40px 60px;
+  overflow: hidden;
+}
+.loginSignup-container h1 {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #5c5c5c;
+  letter-spacing: 1px;
+}
+.loginSignup-fields {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.loginSignup-fields input {
+  outline: none;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
+  width: 90%;
+  height: 7vh;
+  margin: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.loginSignup button {
+  width: 40%;
+  border: none;
+  margin: auto;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 30px;
+  height: 7vh;
+  color: white;
+  background-color: #ff4141;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+}
+.loginSignup button:active {
+  transform: scale(0.98);
+  background-color: #f81212;
+}
+.error {
+  width: 90%;
+  background: #fa5e5e;
+  color: white;
+  height: 5vh;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
