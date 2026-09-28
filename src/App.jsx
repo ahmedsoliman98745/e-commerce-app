@@ -12,11 +12,9 @@ import women_banner from "./Components/Assets/banner_women.png";
 import kid_banner from "./Components/Assets/banner_kids.png";
 import { jwtDecode } from "jwt-decode";
 import Protectedroute from "./Components/Protectedroute/Protectedroute";
-
 function App() {
   const [userData, setuserData] = useState(null);
   const [loading, setLoading] = useState(true);
-
   const saveUserToken = () => {
     let encodedToken = localStorage.getItem("userToken");
     if (encodedToken) {
@@ -29,14 +27,12 @@ function App() {
       }
     }
   };
-
   useEffect(() => {
     if (localStorage.getItem("userToken")) {
       saveUserToken();
     }
     setLoading(false);
   }, []);
-
   const router = useMemo(() => createBrowserRouter([
     {
       path: "/login",
@@ -64,12 +60,10 @@ function App() {
   if (loading) {
     return <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'100vh'}}>Loading...</div>;
   }
-
   return (
     <ShopContextProvider>
       <RouterProvider router={router} />
     </ShopContextProvider>
   );
 }
-
 export default App;
