@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Item from "../Item/Item";
 import data_product from "../Assets/data";
 import "./Popular.css";
