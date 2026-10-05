@@ -26,7 +26,7 @@ A modern **React-based E-Commerce web application** with authentication, cart ma
 
 - **Frontend:** React.js, JavaScript, CSS  
 - **Routing:** React Router v6  
-- **State Management:** useState, useEffect, Context API  
+- **State Management:** useState, useEffect
 - **Authentication:** LocalStorage-based token system  
 - **Deployment:** Vercel  
 
