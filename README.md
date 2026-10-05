@@ -6,7 +6,7 @@ A modern **React-based E-Commerce web application** with authentication, cart ma
 
 ##  Live Demo
 
- [https://e-commerce-app-wheat-one.vercel.app](https://e-commerce-app-wheat-one.vercel.app)
+ [https://e-commerce-app-wheat-one.vercel.app](https://e-commerce-app-lovat-nine.vercel.app/)
 
 ---
 
